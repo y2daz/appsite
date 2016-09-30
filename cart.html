@@ -2,13 +2,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Include jQuery Mobile stylesheets -->
-    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
-    <!-- Include the jQuery library -->
+    <link rel="stylesheet" href="themes/halocity.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
     <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"> </script>
     <!-- Include the jQuery Mobile library -->
     <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"> </script>
+    <script>
+        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+            if (applicationCache &&
+                    applicationCache.status != applicationCache.UNCACHED &&
+                    applicationCache.status != applicationCache.OBSOLETE
+                    ) {
+                options.isLocal = true;
+            }
+        });
 
+    </script>
     <title>Test</title>
 
     <style>
@@ -28,9 +38,9 @@
 
         <div align="right">
             <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >
-                <button data-icon="home" data-iconpos="notext" >Home</button>
-                <button data-icon="user" data-iconpos="notext">Profile</button>
-                <button data-icon="shop" data-iconpos="notext" data-theme="a">Profile</button>
+                <a href="./main.html" data-role="button" data-icon="home" data-iconpos="notext" >Home</a>
+                <a href="./profile.html" data-role="button" data-icon="user" data-iconpos="notext">Profile</a>
+                <a data-role="button" data-icon="shop" data-iconpos="notext" class="ui-btn-active">Cart</a>
             </fieldset>
         </div>
 

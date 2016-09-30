@@ -20,47 +20,43 @@
         });
 
     </script>
+    <title>Test</title>
 </head>
 <body>
 <div data-role="page" data-theme="b">
-    <div data-role="header">
-        <!--<h1>Wild</h1>-->
-    </div>
-
-    <div data-role="main" class="ui-content">
+    <div data-role="main" class="ui-content" data-theme="a">
         <div align="right">
             <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false" >
-                <a data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-active" >Home</a>
+                <a href="./main.html" data-role="button" data-icon="home" data-iconpos="notext" >Home</a>
                 <a href="./profile.html" data-role="button" data-icon="user" data-iconpos="notext">Profile</a>
-                <a href="./cart.html" data-role="button" data-icon="shop" data-iconpos="notext">Cart</a>
+                <a href="./cart.html" data-role="button" data-icon="shop" data-iconpos="notext" >Cart</a>
             </fieldset>
         </div>
 
+        <h1 align="center">Neiman Marcus Coat</h1>
+
         <div style="width:100%;;">
-            <a href="#"><img style="width:100%; opacity: 1.0;" src="img/main.jpg" /></a>
+            <a href="#"><img style="width:100%; opacity: 1.0;" src="img/inventory/1.jpg" /></a>
         </div>
 
         <div>
-            <h2>Wild</h2>
-            <p>The only place for your clothes</p>
+            <h2>Neiman Marcus Coat</h2>
+            <p>An amazing coat to go with some ordinary pair of jeans that'll make you rethink your life.</p>
         </div>
 
-        <a href="gallery.html" data-role="button" data-iconpos="right" data-icon="carat-r" >Shop Now!</a>
+
+
+        <div data-role="collapsible" data-iconpos="right">
+            <h3>Add to Cart</h3>
+            <label>Quantity</label>
+            <input type="number" min="1" max="3"/>
+            <a href="" data-role="button" data-iconpos="right" data-icon="plus" >Add to Cart!</a>
+
+        </div>
+
     </div>
 
     <div data-role="footer" align="right">
-        <div class="ui-grid-b" style="padding: 2%;" align="middle">
-            <div class="ui-block-a" style="height:100%">
-                <img style="height:30px;" src="img/f.png" is="image" align="middle">
-            </div>
-
-            <div class="ui-block-b" style="height:100%">
-                <img style="height:30px;" src="img/t.png" is="image" align="middle">
-            </div>
-            <div class="ui-block-c" style="height:100%">
-                <img style="height:30px;" src="img/i.png" is="image" align="middle">
-            </div>
-        </div>
         &copy; Wild 2016
     </div>
 </div>
